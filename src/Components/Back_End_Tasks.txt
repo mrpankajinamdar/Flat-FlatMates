@@ -1,0 +1,24 @@
+Requirements for back-end
+---------------------------
+
+1. POJO - 1) User - name, id(auto-generated), userid(unique)(email), password, roleType, flatID, contact details
+		  
+		  2) Flat - id, type, amenaties(furnished/non-furnished, parking, transportation), areacode, price, photo(embed Photo pojo)
+		  
+		  3) Address - areacode, colony, street, landmark, city, state
+		  
+		  4) Photos (embed photos in Flat POJO)
+		  
+		  5) Admin (Check admin functionality in Front-end also) -
+		  userid, password, roleType
+		  
+2. DAO -     i) register
+            ii) login
+	       iii) add/remove flat
+			iv)
+
+3. DTO
+
+3. Controller
+
+4. Service
