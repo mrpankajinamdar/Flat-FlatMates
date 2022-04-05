@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const Box = styled.div`
   padding: 60px 60px;
   background: black;
-  position: ;
-  bottom: ;
+  position: Footer;
+  bottom: 50px;
   width: 100%;
-  height:200px;
+  height:400px;
   
    
   @media (max-width: 1000px) {
@@ -19,7 +19,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     max-width: 1000px;
-    margin:  auto;
+    margin: 0 auto;
     /* background: red; */
 `
    
@@ -57,6 +57,6 @@ export const FooterLink = styled.a`
 export const Heading = styled.p`
   font-size: 24px;
   color: #fff;
-  margin-bottom: 0px;
+  margin-bottom: 40px;
   font-weight: bold;
 `;

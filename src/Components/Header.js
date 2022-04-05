@@ -9,7 +9,7 @@ import Stack from '@mui/material/Stack';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import InfoIcon from '@mui/icons-material/Info';
-import { ContactSupport } from "@mui/icons-material";
+import { ContactSupport, Dashboard, DashboardCustomize } from "@mui/icons-material";
 // import { styled } from '@mui/material/styles';
 import { createTheme , ThemeProvider} from '@mui/material/styles';
 import { AppBar, Grid, Typography } from "@mui/material";
@@ -20,6 +20,7 @@ import logo from "./images/flatandflatmates.png"
 
 
 import './Header.css';
+import Search from "@mui/icons-material/Search";
 // import {FaHouzz } from 'react-icons/fa';
 
 function Header(){
@@ -70,7 +71,8 @@ const linkStyle = {
   const gutterStyles = usePushingGutterStyles({ cssProp: 'marginBottom', space: 1 });
      
   return (
-     
+     <div className="container-fluid">
+       <div class="row">
       <ThemeProvider theme={theme}>
         <AppBar color="primary" position="static" sx={{height:'60px'}}>
           <Toolbar disableGutters>
@@ -84,12 +86,15 @@ const linkStyle = {
           <Box  component="div" m={1}  className={`${classes.centerBox} ${classes.box}`}>
           
           <NavUnlisted>
-          <Stack  direction="row" spacing={10} >
+          <Stack  direction="row" spacing={5} >
             <Button variant="outlined" color="secondary" style={{ height: 40 }} size="large" startIcon={<HomeIcon/>} ><Link to="/" style={linkStyle}>Home</Link> </Button>
             <Button variant="outlined" color="secondary" style={{ height: 40 }} size="large" startIcon={<SearchIcon />}> <Link to="/search" style={linkStyle}>Search</Link> </Button>
+
+            {/* <Button variant="outlined" color="secondary" style={{ height: 40 }} size="large" startIcon={<SearchIcon />}> <Link to="/search" style={linkStyle}>Search</Link> </Button> */}
             <Button variant="outlined" color="secondary" style={{ height: 40 }} size="large" startIcon={<InfoIcon />}> <Link to="/about" style={linkStyle}>About Us</Link> </Button>
             <Button variant="outlined" color="secondary" style={{ height: 40 }} size="large" startIcon={<ContactSupport />}> <Link to="/contact" style={linkStyle}>Contact Us</Link> </Button>
-            
+            <Button variant="outlined" color="secondary" style={{ height: 40 }} size="large" startIcon={<DashboardCustomize/>}> <Link to="/dashboard" style={linkStyle}>Dashboard</Link> </Button>
+
             <div className={gutterStyles.parent}>
            
             <Stack direction="row" spacing={10}>
@@ -110,6 +115,8 @@ const linkStyle = {
         </Toolbar>
         </AppBar>
         </ThemeProvider>
+        </div>
+        </div>
       
  );
 }

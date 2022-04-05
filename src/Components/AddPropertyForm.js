@@ -55,11 +55,11 @@ function AddPropertyForm() {
                         <div>
                             if PG selected show other details like details of ppl living there
                         </div> */}
-                            <div class="col-12">
+                            {/* <div class="col-12">
                                 <Form.Group controlId="formFileMultiple" className="mb-3" />
                                 <Form.Label>Upload property photos</Form.Label>
                                 <Form.Control type="file" style={{ maxWidth: "600px" }} multiple />
-                            </div>
+                            </div> */}
                             <div class="col-12 text-center">
                                 <button type="submit" class="btn btn-primary text-center">Add a property</button>
                             </div>

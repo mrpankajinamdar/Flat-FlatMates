@@ -32,21 +32,40 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Social Media</Heading>
+            <table >
+                <tr>
+                    <td>
             <FooterLink href="https://www.facebook.com/">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/225px-2021_Facebook_icon.svg.png" width={"30"}></img>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/225px-2021_Facebook_icon.svg.png" width={"30"}></img>&nbsp;&nbsp;&nbsp;&nbsp;
               
             </FooterLink>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            </td>
+            <td>
             <FooterLink href="https://www.instagram.com/">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/225px-Instagram_logo_2016.svg.png" width ="30"></img>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/225px-Instagram_logo_2016.svg.png" width ="30"></img>&nbsp;&nbsp;&nbsp;&nbsp;
               
             </FooterLink>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+            </td>
+            <td>
             <FooterLink href="https://twitter.com/">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/150px-Twitter-logo.svg.png" width="30"></img>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/150px-Twitter-logo.svg.png" width="30"></img>&nbsp;&nbsp;&nbsp;&nbsp;
               
             </FooterLink>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+            </td>
+            <td>
             <FooterLink href="https://www.youtube.com/">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/375px-YouTube_Logo_2017.svg.png" width="60"></img>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/375px-YouTube_Logo_2017.svg.png" width="60"></img>&nbsp;&nbsp;&nbsp;&nbsp;
             </FooterLink>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            </tr>
+            </table>
           </Column>
         </Row>
       </Container>

@@ -11,8 +11,10 @@ function FirstPage(){
    <h1 class="center mb-2"><span><b>Your Search ends here...</b></span></h1>
     <img class="center" src={pic} alt="Flats" style={{width:"90%" , height:"500px"}}/>
    </span>
+   <div>
+       
+   </div>
    <ShowProperties/> <p/>
-   <AddPropertyForm/>
        </div>
 
     )

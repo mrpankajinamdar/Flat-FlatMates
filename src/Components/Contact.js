@@ -1,25 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Contact(){
 
+    const [name,setName] = useState("");
+    const [email,setEmail] = useState("");
+    const [commentTextarea,setcommentTextarea] = useState("");
+
+    var handleSubmit = (event) =>{
+        event.preventDefault(); //Stop the form default action that is to submit the data and reload the page
+        var contact = { //creating JS object of movie data
+            name : event.target.name.value,
+            email : event.target.email.value,
+            commentTextarea : event.target.commentTextarea.value
+        }
+        console.log(contact);
+        console.log(JSON.stringify(contact))
+    }
 
     return(
+        
+        <div className="row justify-content-center box-height">
+            <div className="col-6 align-self-center shadow-lg">
+                <form onSubmit={handleSubmit}>
+                    <div className="m-5">
+                    <h4><b><p>Get in touch with us</p></b></h4>
+                        <div className="mb-3">
+                            <label htmlFor="name" className="text-dark">Name</label>
+                            <input type="text" className="form-control" name="name" placeholder="Enter your Name"/>
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="email" className="text-dark">Email</label>
+                            <input type="text" className="form-control" name="email" placeholder="Enter your email"/>
+                        </div>
+                        <div class="form-group">
+                            <label htmlFor="commentTextarea">Comments</label>
+                            <textarea class="form-control" name="commentTextarea" rows="3"></textarea>
+                        </div>
+                        <br/>
+                        <div className="mb-3 text-center">
+                            <button className="btn btn-primary">Send Message</button>
+                        </div>
+                    </div>
+                </form>    
+            </div>
+        </div>
 
-    <>
-        <div class="w3-container w3-padding-32" id="contact"/>
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact Us</h3>
-        <h5><p>Get in touch with us</p></h5>
-        <form action="/action_page.php" target="_blank"/>
-        <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" style={{maxWidth:"600px"}}/>
-        <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email" style={{maxWidth:"600px"}}/>
-        <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject" style={{maxWidth:"600px"}}/>
-        <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment" style={{maxWidth:"600px"}}/>
-        <button class="w3-button w3-black w3-section" type="submit">
-            <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-    
-
-      </>
     )
 }
 

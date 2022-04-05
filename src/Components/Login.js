@@ -1,24 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Login() {
+function Login(){
 
+    const [userName,setUserName] = useState("");
+    const [password,setPassword] = useState("");
+    
+    var handleSubmit = (event) =>{
+        event.preventDefault(); //Stop the form default action that is to submit the data and reload the page
+        var login = { //creating JS object of movie data
+            userName : event.target.userName.value,
+            password : event.target.password.value,
+        }
+        console.log(login);
+        console.log(JSON.stringify(login))
+    }
 
-    return (
-
+    return(
+        
         <div className="row justify-content-center box-height">
             <div className="col-6 align-self-center shadow-lg">
-                <div class="w3-container w3-padding-32" id="login" />
-                <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Login here</h3>
-                <h5><p></p></h5>
-                <form action="/search.js" target="_blank" />
-                <input class="w3-input w3-border" type="text" placeholder="UserName" required name="UserName" style={{ maxWidth: "600px" }} />
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Password" required name="Password" style={{ maxWidth: "600px" }} />
-                <button class="w3-button w3-black w3-section" type="submit">
-                    <i class="fa fa-paper-plane"></i> Login
-                </button>
+                <form onSubmit={handleSubmit}>
+                    <div className="m-5">
+                    <h4><b><p>Login..</p></b></h4>
+                        <div className="mb-3">
+                            <label htmlFor="name" className="text-dark">UserName</label>
+                            <input type="text" className="form-control" name="name" placeholder="Enter your Name"/>
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="password" className="text-dark">Password</label>
+                            <input type="text" className="form-control" name="password" placeholder="Enter password"/>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                        </div>
+                        <br/>
+                        <div className="mb-3 text-center">
+                            <button className="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+                </form>    
             </div>
         </div>
-
 
     )
 }
